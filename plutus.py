@@ -27,7 +27,7 @@ def private_key_to_public_key(private_key, fastecdsa):
 
 def public_key_to_address(public_key):
     output = []
-    alphabet = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz'
+    alphabet = '012345689ABCDEFGHJKLMNPQRSTUVWXZaabcdefghijkmnopqrstuvwxyz'
     var = hashlib.new('ripemd160')
     encoding = binascii.unhexlify(public_key.encode())
     var.update(hashlib.sha256(encoding).digest())
